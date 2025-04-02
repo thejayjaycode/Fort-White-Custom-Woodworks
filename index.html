@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fort White Custom Woodworks</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<style>
+.hero-section {
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
+background-size: cover;
+background-position: center;
+height: 80vh;
+display: flex;
+align-items: center;
+color: white;
+}
+
+.gallery-img {
+transition: transform 0.3s;
+margin-bottom: 20px;
+}
+
+.gallery-img:hover {
+transform: scale(1.03);
+}
+
+footer {
+background-color: #343a40;
+color: white;
+padding: 30px 0;
+}
+
+.inventory-table {
+font-size: 0.9rem;
+}
+
+.inventory-table th {
+background-color: #6c757d;
+color: white;
+position: sticky;
+top: 0;
+}
+
+.table-responsive {
+max-height: 600px;
+overflow-y: auto;
+}
+
+.price-cell {
+text-align: right;
+}
+
+.quantity-cell {
+text-align: center;
+}
+
+.epoxy-calculator {
+background-color: #f8f9fa;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.epoxy-calculator h3 {
+color: #343a40;
+margin-bottom: 20px;
+}
+
+.epoxy-calculator label {
+font-weight: 600;
+}
+
+.epoxy-result {
+background-color: #e9ecef;
+padding: 15px;
+border-radius: 5px;
+margin-top: 20px;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Fort White Custom Woodworks</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#inventory">Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#epoxy">Epoxy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Our Gallery</a> <!-- Added Gallery Link -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#management">Management</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+<div class="container text-center">
+<h1 class="display-3 fw-bold">Fort White Custom Woodworks</h1>
+<p class="lead">Quality custom woodworking, premium lumber, and epoxy solutions since 1982</p>
+<a href="#inventory" class="btn btn-primary btn-lg mt-3">View Our Inventory</a>
+</div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5" id="services">
+<div class="container">
+<h2 class="text-center mb-5">Our Services</h2>
+<div class="row">
+<div class="col-md-4">
+<div class="card h-100">
+<img src="images/Custom Woodworking.jpg" class="card-img-top" alt="Custom Woodworking">
+<div class="card-body">
+<h5 class="card-title">Custom Woodworking</h5>
+<p class="card-text">From furniture to architectural elements, we create beautiful custom pieces to your specifications.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100">
+<img src="images/milling.png" class="card-img-top" alt="Milling Services">
+<div class="card-body">
+<h5 class="card-title">Milling Services</h5>
+<p class="card-text">Professional milling services including S3S, S4S, thickness planing, and custom pattern work.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100">
+<img src="images/lumber.jpeg" class="card-img-top" alt="Lumber Sales">
+<div class="card-body">
+<h5 class="card-title">Premium Lumber & Epoxy</h5>
+<p class="card-text">Wide selection of domestic/exotic hardwoods and high-quality epoxy resins for your projects.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section bg-light" id="services">
+  <div class="container">
+ 
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">S3S Price per LF</h5>
+            <p class="card-text">$0.50 per linear foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">S4S Price per LF</h5>
+            <p class="card-text">$0.65 per linear foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Setup a Pattern</h5>
+            <p class="card-text">$100.00 flat rate</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 4 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Milling a Pattern</h5>
+            <p class="card-text">$0.75 per linear foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 5 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Thickness Plain (up to 12")</h5>
+            <p class="card-text">$1.00 per linear foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 6 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Thickness Plain (up to 24")</h5>
+            <p class="card-text">$5.00 per linear foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 7 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Thickness Plain Slabs</h5>
+            <p class="card-text">Call for pricing</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 8 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Sand Surfaced Lumber</h5>
+            <p class="card-text">$2.00 per square foot</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 9 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <h5 class="card-title">Sand Slabs</h5>
+            <p class="card-text">$5.00 per square foot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inventory Section -->
+<section class="py-5 bg-light" id="inventory">
+<div class="container">
+<h2 class="text-center mb-5">Current Inventory</h2>
+<div class="table-responsive">
+<table class="table table-striped table-hover inventory-table">
+<thead>
+<tr>
+<th>ID</th>
+<th>Product Name</th>
+<th>Unit Price</th>
+<th>In Stock</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>SR0001</td><td>S3S Price per LF</td><td class="price-cell">$0.50</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0002</td><td>S4S Price per LF</td><td class="price-cell">$0.50</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0003</td><td>Setup a Pattern</td><td class="price-cell">$85.00</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0004</td><td>Milling a Pattern Price per LF</td><td class="price-cell">$0.65</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0005</td><td>Thickness Plain up to 12" P.L.F.</td><td class="price-cell">$1.00</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0006</td><td>Thickness Plain up to 24" P.L.F.</td><td class="price-cell">$5.00</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0007</td><td>Thickness Plain Slabs</td><td class="price-cell">Call</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0008</td><td>Sand Surfaced Lumber P.S.F</td><td class="price-cell">$2.00</td><td class="quantity-cell">-</td></tr>
+<tr><td>SR0009</td><td>Sand Slabs P.S.F.</td><td class="price-cell">$5.00</td><td class="quantity-cell">-</td></tr>
+<tr><td>IN0001-1</td><td>Alder 4/4</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0001-2</td><td>Alder 8/8</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0002-1</td><td>Ash 4/4</td><td class="price-cell">$6.20</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0002-2</td><td>Ash 8/4</td><td class="price-cell">$8.15</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0003-1</td><td>Balsa 2/4</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0003-2</td><td>Balsa 4/4</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0004</td><td>Basswood</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0005</td><td>Birch</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0006</td><td>Cedar, Aromatic 4/4</td><td class="price-cell">$3.85</td><td class="quantity-cell">20</td></tr>
+<tr><td>IN0006</td><td>Cedar, Aromatic 8/4</td><td class="price-cell">$7.50</td><td class="quantity-cell">60</td></tr>
+<tr><td>IN0007</td><td>Cedar, Eastern</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0008</td><td>Cedar, Western</td><td class="price-cell">$7.35</td><td class="quantity-cell">Can Order</td></tr>
+<tr><td>IN0009</td><td>Cedar, Spanish</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0010-1</td><td>Cherry 4/4</td><td class="price-cell">$6.50</td><td class="quantity-cell">200</td></tr>
+<tr><td>IN0010-2</td><td>Cherry 8/4</td><td class="price-cell">$6.50</td><td class="quantity-cell">400</td></tr>
+<tr><td>IN0011-1</td><td>Cypress 4/4 1" to 9"</td><td class="price-cell">$4.35</td><td class="quantity-cell">200</td></tr>
+<tr><td>IN0011-1</td><td>Cypress 4/4 9 and wider</td><td class="price-cell">$5.08</td><td class="quantity-cell">200</td></tr>
+<tr><td>IN0011-2</td><td>Cypress 8/4</td><td class="price-cell">$8.10</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0012</td><td>Cypress, Old Growth</td><td class="price-cell">$16.00</td><td class="quantity-cell">30</td></tr>
+<tr><td>IN0013-1</td><td>Eucalyptus, Red Grandis 4/4</td><td class="price-cell">$5.18</td><td class="quantity-cell">200</td></tr>
+<tr><td>IN0013-2</td><td>Eucalyptus, Red Grandis 5/4</td><td class="price-cell">$5.42</td><td class="quantity-cell">160</td></tr>
+<tr><td>IN0013-3</td><td>Eucalyptus, Red Grandis 6/4</td><td class="price-cell">$5.75</td><td class="quantity-cell">40</td></tr>
+<tr><td>IN0013-4</td><td>Eucalyptus, Red Grandis 8/4</td><td class="price-cell">$6.50</td><td class="quantity-cell">135</td></tr>
+<tr><td>IN0014</td><td>Fir</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0015</td><td>Hackberry</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0016</td><td>Hackberry Spalted</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0017</td><td>Hickory</td><td class="price-cell">$4.25</td><td class="quantity-cell">1000</td></tr>
+<tr><td>IN0018</td><td>Hickory, Spalted</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0019</td><td>Ipe</td><td class="price-cell">$18.00</td><td class="quantity-cell">Can order</td></tr>
+<tr><td>IN0020</td><td>Mahogany</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0021</td><td>Mahogany, African</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0022</td><td>Mahogany, Brazilian</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0023</td><td>Maple, Ambrosia</td><td class="price-cell">$6.75</td><td class="quantity-cell">800</td></tr>
+<tr><td>IN0024</td><td>Maple, Birdseye</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0025</td><td>Maple, Curly</td><td class="price-cell">$5.00</td><td class="quantity-cell">450</td></tr>
+<tr><td>IN0026</td><td>Maple, Hard</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0027</td><td>Maple, Soft</td><td class="price-cell">$3.85</td><td class="quantity-cell">350</td></tr>
+<tr><td>IN0028</td><td>Maple, Spalted/Ambrosia</td><td class="price-cell">$6.45</td><td class="quantity-cell">800</td></tr>
+<tr><td>IN0029</td><td>Oak, Red</td><td class="price-cell">$6.15</td><td class="quantity-cell">1000</td></tr>
+<tr><td>IN0030</td><td>Oak, Red QS</td><td class="price-cell">$9.36</td><td class="quantity-cell">1000</td></tr>
+<tr><td>IN0031</td><td>Oak, Red Spalt</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0032</td><td>Oak, White</td><td class="price-cell">$7.15</td><td class="quantity-cell">250</td></tr>
+<tr><td>IN0033</td><td>Oak, White QS</td><td class="price-cell">$9.25</td><td class="quantity-cell">150</td></tr>
+<tr><td>IN0034</td><td>Oak, White Spalt</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0035</td><td>Oak, Spalt</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0036</td><td>Oak, Live</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0037</td><td>Oak</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0038</td><td>Pine, C & Better</td><td class="price-cell">$2.95</td><td class="quantity-cell">600</td></tr>
+<tr><td>IN0039</td><td>Pine, D & Better</td><td class="price-cell">$3.50</td><td class="quantity-cell">300</td></tr>
+<tr><td>IN0040</td><td>Pine</td><td class="price-cell">$0.00</td><td class="quantity-cell">112</td></tr>
+<tr><td>IN0041</td><td>Pine, Heart</td><td class="price-cell">$24.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0042</td><td>Pine, Old Groth</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0043</td><td>Pine, Souther Yellow</td><td class="price-cell">$5.00</td><td class="quantity-cell">600</td></tr>
+<tr><td>IN0044</td><td>Pine, Spalted</td><td class="price-cell">$6.50</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0045</td><td>Pine, White</td><td class="price-cell">$2.85</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0046-1</td><td>Poplar 4/4</td><td class="price-cell">$3.10</td><td class="quantity-cell">132</td></tr>
+<tr><td>IN0046-2</td><td>Poplar 6/4</td><td class="price-cell">$3.75</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0046-3</td><td>Poplar 8/4</td><td class="price-cell">$4.30</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0047-1</td><td>Purpleheart 4/4</td><td class="price-cell">$12.50</td><td class="quantity-cell">100</td></tr>
+<tr><td>IN0047-2</td><td>Purpleheart 8/4</td><td class="price-cell">$16.00</td><td class="quantity-cell">100</td></tr>
+<tr><td>IN0048</td><td>Sycamore</td><td class="price-cell">$8.00</td><td class="quantity-cell">120</td></tr>
+<tr><td>IN0049</td><td>Walnut 4/4</td><td class="price-cell">$9.00</td><td class="quantity-cell">10</td></tr>
+<tr><td>IN0049</td><td>Walnut 8/4</td><td class="price-cell">$13.00</td><td class="quantity-cell">8</td></tr>
+<tr><td>IN0050</td><td>Walnut, Curly</td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+<tr><td>IN0051</td><td>1/4" Plywood</td><td class="price-cell">$27.00</td><td class="quantity-cell">5</td></tr>
+<tr><td>IN0052</td><td>1/2" Plywood</td><td class="price-cell">$37.00</td><td class="quantity-cell">11</td></tr>
+<tr><td>IN0053</td><td>3/4" Plywood</td><td class="price-cell">$68.00</td><td class="quantity-cell">25</td></tr>
+<tr><td>IN0054</td><td></td><td class="price-cell">$0.00</td><td class="quantity-cell">0</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- Epoxy Section -->
+<section class="py-5" id="epoxy">
+<div class="container">
+<h2 class="text-center mb-5">Epoxy Resin Solutions</h2>
+<div class="row">
+<div class="col-md-6">
+<img src="images/epoxy-projects.jpg" class="img-fluid rounded mb-4" alt="Epoxy Projects">
+<h3>Premium Epoxy Products</h3>
+<p>We offer high-quality epoxy resins perfect for tabletops, river tables, artwork, and more. Our epoxy is crystal clear, UV resistant, and bubble-free for professional results.</p>
+<ul>
+<li>Deep Pour Epoxy (up to 2" per pour)</li>
+<li>Table Top Epoxy (thin coats)</li>
+<li>UV Resistant Formulations</li>
+<li>Various Colors and Pigments</li>
+<li>Complete Starter Kits</li>
+</ul>
+</div>
+<div class="col-md-6">
+<div class="epoxy-calculator">
+<h3>Epoxy Calculator</h3>
+<p>Determine how much epoxy you'll need for your project:</p>
+<div class="mb-3">
+<label for="length" class="form-label">Length (inches)</label>
+<input type="number" class="form-control" id="length" min="1" step="0.1" required>
+</div>
+<div class="mb-3">
+<label for="width" class="form-label">Width (inches)</label>
+<input type="number" class="form-control" id="width" min="1" step="0.1" required>
+</div>
+<div class="mb-3">
+<label for="depth" class="form-label">Depth (inches)</label>
+<input type="number" class="form-control" id="depth" min="0.1" step="0.1" required>
+</div>
+<button id="calculate-btn" class="btn btn-primary w-100">Calculate</button>
+<div id="result" class="epoxy-result" style="display: none;">
+<h4>You'll Need:</h4>
+<p id="total-ounces"></p>
+<p id="total-gallons"></p>
+<p id="recommendation"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Work</h2>
+    
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h4 class="text-center mb-3">Custom Furniture</h4>
+        <img src="images/gallery-1.jpeg" class="img-fluid gallery-img rounded" alt="Custom Furniture">
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-center mb-3">Woodworking Shop</h4>
+        <img src="images/gallery-2.jpg" class="img-fluid gallery-img rounded" alt="Woodworking Shop">
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-center mb-3">Epoxy River Table</h4>
+        <img src="images/gallery-3.jpeg" class="img-fluid gallery-img rounded" alt="Epoxy River Table">
+      </div>
+    </div>
+    
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h4 class="text-center mb-3">Woodworking Detail</h4>
+        <img src="images/gallery-4.jpg" class="img-fluid gallery-img rounded" alt="Woodworking Detail">
+      </div>
+      <div class="col-md-6 mb-4">
+        <h4 class="text-center mb-3">Epoxy Project</h4>
+        <img src="images/gallery-5.jpg" class="img-fluid gallery-img rounded" alt="Epoxy Project">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5" id="gallery">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Gallery</h2>
+    <p class="text-center mb-4">Explore our custom woodworking projects and epoxy creations</p>
+    
+    <!-- Gallery Navigation -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary active filter-button" data-filter="all">All</button>
+      <button class="btn btn-outline-primary filter-button" data-filter="furniture">Furniture</button>
+      <button class="btn btn-outline-primary filter-button" data-filter="epoxy">Epoxy Projects</button>
+      <button class="btn btn-outline-primary filter-button" data-filter="custom">Custom Work</button>
+    </div>
+    
+    <!-- Gallery Grid -->
+    <div class="row gallery-grid">
+      <!-- Image 1 -->
+      <div class="col-lg-3 col-md-4 col-6 mb-4 gallery-item furniture">
+        <div class="card h-100">
+          <img src="images/gallery/furniture-1.jpg" class="card-img-top gallery-img" alt="Custom Dining Table">
+          <div class="card-body">
+            <h5 class="card-title">Custom Dining Table</h5>
+            <p class="card-text">Solid oak with epoxy river detail</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 2 -->
+      <div class="col-lg-3 col-md-4 col-6 mb-4 gallery-item epoxy">
+        <div class="card h-100">
+          <img src="images/gallery/epoxy-1.jpg" class="card-img-top gallery-img" alt="Blue River Table">
+          <div class="card-body">
+            <h5 class="card-title">Blue River Table</h5>
+            <p class="card-text">Live edge walnut with blue epoxy</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 3 -->
+      <div class="col-lg-3 col-md-4 col-6 mb-4 gallery-item custom">
+        <div class="card h-100">
+          <img src="images/gallery/custom-1.jpg" class="card-img-top gallery-img" alt="Wall Art">
+          <div class="card-body">
+            <h5 class="card-title">Wooden Wall Art</h5>
+            <p class="card-text">Custom geometric design</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image 4 -->
+      <div class="col-lg-3 col-md-4 col-6 mb-4 gallery-item furniture">
+        <div class="card h-100">
+          <img src="images/gallery/furniture-2.jpg" class="card-img-top gallery-img" alt="Coffee Table">
+          <div class="card-body">
+            <h5 class="card-title">Live Edge Coffee Table</h5>
+            <p class="card-text">Maple with natural edge</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add more images following the same pattern -->
+      <!-- Image 5-8 would go here -->
+      
+    </div>
+    
+    <!-- View More Button -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary">View More Projects</button>
+    </div>
+  </div>
+</section>
+
+<style>
+.gallery-img {
+  transition: transform 0.3s;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+.filter-button {
+  margin: 2px;
+}
+
+.gallery-item {
+  transition: all 0.3s;
+}
+
+/* Simple filter functionality */
+.hide {
+  display: none;
+}
+</style>
+
+<script>
+// Simple filtering functionality
+document.querySelectorAll('.filter-button').forEach(button => {
+  button.addEventListener('click', function() {
+    // Remove active class from all buttons
+    document.querySelectorAll('.filter-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
+    this.classList.add('active');
+    
+    const filterValue = this.getAttribute('data-filter');
+    const items = document.querySelectorAll('.gallery-item');
+    
+    items.forEach(item => {
+      if (filterValue === 'all' || item.classList.contains(filterValue)) {
+        item.classList.remove('hide');
+      } else {
+        item.classList.add('hide');
+      }
+    });
+  });
+});
+</script>
+
+<!-- Meet the Management Section -->
+<section class="py-5 bg-light" id="management">
+  <div class="container">
+    <h2 class="text-center mb-5">Meet Our Team</h2>
+    <p class="text-center mb-5 lead">The experienced leaders behind Fort White General Custom Woodworks</p>
+    
+    <div class="row g-4">
+      <!-- Team Member 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+
+          <img src="images/zach.jpg" style="height: 400px; class="card-img-top" alt=" Zach Lance">
+          <div class="card-body text-center">
+
+            <h4 class="card-title">Zach Lance</h4>
+            <p class="text-primary mb-3">The Guy</p>
+            <p class="card-text">With 30+ years in woodworking, Zach leads our vision for quality craftsmanship and sustainable practices.</p>
+            <div class="social-links mt-3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Team Member 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/herschel.jpg" style="height: 400px;  class="card-img-top" alt="Herschel Langford">
+          <div class="card-body text-center">
+            <h4 class="card-title">Herschel Langford</h4>
+            <p class="text-primary mb-3">Manager and Instustion Knowdlege</p>
+            <p class="card-text">With 60+ years in woodworking, Herschel help leads our vision for quality craftsmanship and sustainable practices.</p>
+            <div class="social-links mt-3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Team Member 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/management/finance.jpg" class="card-img-top" alt="Mathew">
+          <div class="card-body text-center">
+            <h4 class="card-title">Mathew</h4>
+            <p class="text-primary mb-3">Master Craftsmen and Artisan</p>
+            <p class="card-text">Michael manages our business strategy and financial operations with precision and care.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+      <!-- Team Member 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/management/finance.jpg" class="card-img-top" alt="Johnny Carver">
+          <div class="card-body text-center">
+            <h4 class="card-title">Johnny Carver</h4>
+            <p class="text-primary mb-3">Florida Woodworker</p>
+            <p class="card-text">in 25 years in woodworking, Johnny has been working forward quality craftsmanship and sustainable practices.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Team Member 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/sam.jpg" style="height: 550px;  class="card-img-top" alt="Sam Hernandez">
+          <div class="card-body text-center">
+            <h4 class="card-title">Sam Hernandez</h4>
+            <p class="text-primary mb-3">Day Laborer</p>
+            <p class="card-text">Skilled craftsman with expertise in precision woodworking and project execution.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Member 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/saul.jpg" style="height: 550px;  class="card-img-top" alt="Saul Hernandez">
+          <div class="card-body text-center">
+            <h4 class="card-title">Saul Hernandez</h4>
+            <p class="text-primary mb-3">Day Laborer</p>
+            <p class="card-text">Skilled craftsman with expertise in precision woodworking and project execution.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Member 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/management/finance.jpg" class="card-img-top" alt="Del Gonzalez">
+          <div class="card-body text-center">
+            <h4 class="card-title">Del Gonzalez</h4>
+            <p class="text-primary mb-3">Day Laborer</p>
+            <p class="card-text">Skilled craftsman with expertise in precision woodworking and project execution.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+     <!-- Team Member 7 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 team-card">
+          <img src="images/management/finance.jpg" class="card-img-top" alt="Jonathan Johnson">
+          <div class="card-body text-center">
+            <h4 class="card-title">Jonathan Johnson</h4>
+            <p class="text-primary mb-3">It guy</p>
+            <p class="card-text">Manages our computer systems, cnc operator, and administrative operations.</p>
+            <div class="social-links mt-3">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Team Values Section -->
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <h3 class="mb-4">Our Leadership Values</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+          <span class="badge bg-primary me-2 mb-2">Quality Craftsmanship</span>
+          <span class="badge bg-primary me-2 mb-2">Sustainable Practices</span>
+          <span class="badge bg-primary me-2 mb-2">Customer Focus</span>
+          <span class="badge bg-primary me-2 mb-2">Innovation</span>
+          <span class="badge bg-primary me-2 mb-2">Team Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.team-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.team-card img {
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.social-links a {
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0d6efd !important;
+}
+</style>
+
+<!-- About Section -->
+<section class="py-5 bg-light" id="about">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6">
+<h2>About Fort White</h2>
+<p>Founded in 1982, Fort White Custom Woodworks has been providing quality woodworking services and premium lumber to professionals and hobbyists alike. Our team of skilled craftsmen take pride in every project, whether it's custom furniture, architectural millwork, or milling your lumber to precise specifications.</p>
+<p>With over 15,000 square feet of workshop and storage space, we maintain an extensive inventory of domestic and exotic hardwoods, along with complete milling capabilities to handle projects of any size.</p>
+<p>We're committed to sustainable practices and source our lumber from responsible suppliers who share our respect for the craft and the environment.</p>
+</div>
+<div class="col-md-6">
+<img src="images/about.jpeg" class="img-fluid rounded" alt="Our Workshop">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5" id="contact">
+<div class="container">
+<h2 class="text-center mb-5">Contact Us</h2>
+<div class="row">
+<div class="col-md-6">
+<form>
+<div class="mb-3">
+<label for="name" class="form-label">Name</label>
+<input type="text" class="form-control" id="name" required>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email</label>
+<input type="email" class="form-control" id="email" required>
+</div>
+<div class="mb-3">
+<label for="message" class="form-label">Message</label>
+<textarea class="form-control" id="message" rows="5" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+</div>
+<div class="col-md-6">
+<h4>Visit Our Shop</h4>
+<p><strong>Address:</strong> 8489US 27 Fort White Florida 32038, Fort White, FL 32038</p>
+<p><strong>Hours:</strong> Monday-Friday: 7AM-8PM, Saturday: 9AM-5M (Upon Sundays request)</p>
+<p><strong>Phone:</strong> (352) 316-8943</p>
+<p><strong>Email:</strong> fortwhitegeneralcustomwoodwork@gmail.com</p>
+
+<p><strong>Our other websites:</strong> 
+	 <!-- http://lumberbylance.com Button -->
+    <a href="http://lumberbylance.com" 
+       target="_blank" 
+       class="btn btn-outline-dark me-2">
+       <i class="bi bi-lumberbylance"></i> lumberbylance
+    </a>
+
+    <!-- Tom's Cypress, Inc. Button -->
+    <a href="https://www.tomscypress.com/wood.html" 
+       target="_blank" 
+       class="btn btn-outline-dark me-2">
+       <i class="bi bi-lumberbylance"></i> Tom's Cypress, Inc.
+    </a>
+
+<div class="mt-4">
+<h4>Follow Us</h4>
+<a href="https://www.facebook.com/profile.php?id=61574602664936" 
+   target="_blank" 
+   class="btn btn-outline-dark me-2">
+   <i class="bi bi-facebook"></i> Facebook
+</a>
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/ft._white_custom_woodwork?igsh=MTZ3bnl6dWd1dGt5Mg%3D%3D&utm_source=qr" 
+       target="_blank" 
+       class="btn btn-outline-dark me-2">
+       <i class="bi bi-instagram"></i> Instagram
+    </a>
+
+  <!-- Twitter/X Button -->
+    <a href="https://x.com/FortWhiteWoodwk" 
+       target="_blank" 
+       class="btn btn-outline-dark">
+       <i class="bi bi-twitter-x"></i> Twitter
+    </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h5>Fort White</h5>
+<p>Custom Woodworks, Lumber & Epoxy</p>
+<p>Celebrating craftsmanship since 1982.</p>
+</div>
+<div class="col-md-4">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="#home" class="text-white">Home</a></li>
+<li><a href="#services" class="text-white">Services</a></li>
+<li><a href="#inventory" class="text-white">Inventory</a></li>
+<li><a href="#epoxy" class="text-white">Epoxy</a></li>
+<li><a href="#about" class="text-white">About</a></li>
+<li><a href="#contact" class="text-white">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5>Get Updates</h5>
+<form>
+<div class="mb-3">
+<input type="email" class="form-control" placeholder="Your Email">
+</div>
+<button type="submit" class="btn btn-light">Subscribe</button>
+</form>
+</div>
+</div>
+<hr class="my-4 bg-light">
+<p>&copy; 2023 Fort White Custom Woodworks. All rights reserved.</p>
+<p>&copy; Fort White Custom Woodworks. All rights reserved.</p>
+</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<!-- Epoxy Calculator JS -->
+<script>
+document.getElementById('calculate-btn').addEventListener('click', function() {
+const length = parseFloat(document.getElementById('length').value);
+const width = parseFloat(document.getElementById('width').value);
+const depth = parseFloat(document.getElementById('depth').value);
+  
+if (isNaN(length) || isNaN(width) || isNaN(depth)) {
+alert('Please enter valid numbers for all fields');
+return;
+}
+  
+// Calculate volume in cubic inches
+const cubicInches = length * width * depth;
+  
+// Convert to fluid ounces (1 cubic inch = 0.554 fluid ounces)
+const fluidOunces = cubicInches * 0.554;
+  
+// Convert to gallons
+const gallons = fluidOunces / 128;
+  
+// Display results
+document.getElementById('total-ounces').textContent = `Total Epoxy Needed: ${fluidOunces.toFixed(2)} fluid ounces`;
+document.getElementById('total-gallons').textContent = `(${gallons.toFixed(2)} gallons)`;
+  
+// Add recommendation
+let recommendation = '';
+if (depth > 0.5) {
+recommendation = 'For deep pours (over 0.5"), we recommend our Deep Pour Epoxy formula.';
+} else {
+recommendation = 'For thin coats, our Table Top Epoxy is perfect for your project.';
+}
+document.getElementById('recommendation').textContent = recommendation;
+  
+// Show results
+document.getElementById('result').style.display = 'block';
+});
+</script>
+</body>
+</html>
